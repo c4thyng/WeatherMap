@@ -1,5 +1,7 @@
 # WeatherApp
 
+A project to see temperature and wind speed at a given place. Use searching to search for places and add them to your list over places.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
 
 ## Development server
