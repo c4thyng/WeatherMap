@@ -1,0 +1,20 @@
+.search-container {
+  z-index: 10;
+  .search-list {
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0px 0.5rem 0.5rem 0px rgba(0,0,0,0.2);
+    list-style-type: none;
+    padding-left: .5rem;
+    .search-item {
+      &:hover {
+        background-color: rgb(221, 219, 219);
+      }
+    }
+  }
+}
+
+.search-input {
+  width: 15rem;
+  padding: 0.5rem;
+}

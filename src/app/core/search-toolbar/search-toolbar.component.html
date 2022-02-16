@@ -1,0 +1,19 @@
+<div fxFlex="1 1 auto" fxLayout="column" >
+  <div fxFlex="0 0 auto" fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxFlex="1 1 auto">
+      <form [formGroup]="searchToolbarFormGroup">
+        <input  class="search-input" placeholder="Søk en by for å se været der" type="search" (keyup)="searchByText($event.target)" formControlName="SearchText">
+      </form>
+    </div>
+    <div fxFlex="1 1 auto" fxLayout="row-reverse">
+      <button (click)="showMenu()"> Se favoritter </button>
+    </div>
+  </div>
+  <div *ngIf="searchToolbarFormGroup.get('SearchText')?.value && locations.length > 0 && showSearchResult" fxFlex="0 0 auto" class="search-container">
+    <ul class="search-list" fxLayout="column" fxLayoutGap="0.5rem" >
+      <li *ngFor="let location of locations" (click)="onSelect(location)" class="search-item">
+        {{ location.place_name }}
+      </li>
+    </ul>
+  </div>
+</div>

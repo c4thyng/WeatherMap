@@ -1,0 +1,12 @@
+<div class="menu-container">
+  <button class="button" (click)="globalHandlingService.showMenu = false">X</button>
+
+  <h3 class="subtitle">Mine valgte steder</h3>
+  <div *ngIf="globalSearchService.addedLocations.length > 0">
+    <ul class="no-bullet-list" fxLayout="column" fxLayoutGap="0.5rem" >
+      <li *ngFor="let location of globalSearchService.addedLocations" (click)="onSelect(location)" class="list-item">
+        {{ location.place_name }}
+      </li>
+    </ul>
+  </div>
+</div>
